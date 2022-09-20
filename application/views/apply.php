@@ -113,7 +113,28 @@
                         <div class="dihapus">
                             <p>No employment record available!</p>
                         </div>
-                        <button type="button" class="btn btn-danger" style="border: none; border-radius: 25px; height: 50px; width: 170px; margin-top: 10px;" id="eduBtn">Add Academy</button>
+                        <div class="form-edu">
+                            <div class="input-1">
+                                <label class="form-label">level of education *</label>
+                                <input type="text" class="form-control" placeholder="*No education qualification available" name="" id="inputeducational"></input>
+                            </div>
+
+                            <div class="input-1">
+                                <label class="form-label">Exam or degree title *</label>
+                                <input type="text" class="form-control" placeholder="*No education qualification available" name="" id="inputeducational"></input>
+                            </div>
+
+                            <div class="input-1">
+                                <label class="form-label">Year of passing *</label>
+                                <input type="text" class="form-control" placeholder="*No education qualification available" name="" id="inputeducational"></input> 
+                            </div>
+
+                            <div class="input-1">
+                                <label class="form-label">Institute name *</label>
+                                <input type="text" class="form-control" placeholder="*No education qualification available" name="" id="inputeducational"></input>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-danger" style="border: none; border-radius: 25px; height: 50px; width: 170px; margin-top: 50px;" id="eduBtn">Add Academy</button>
                     </div>
                 </div>
 
@@ -130,10 +151,38 @@
                             </label>
                         </div>
                     </div>
-                    <div class="textarea">
-                        <textarea class="form-control" placeholder="*No employment qualification available" name="" id="inputemployment" style="height: 130px; border: none;"></textarea>
-                        <button type="button" class="btn btn-danger" style="border: none; border-radius: 25px; height: 50px; width: 170px; margin-top: 10px;">Add Company</button>
+                    <div class="form-employ">
+                            <div class="input-1">
+                                <label class="form-label">Company name *</label>
+                                <input type="text" class="form-control" placeholder="*No education qualification available" name="" id="inputeducational"></input>
+                            </div>
+
+                            <div class="input-1">
+                                <label class="form-label">Designation *</label>
+                                <input type="text" class="form-control" placeholder="*No education qualification available" name="" id="inputeducational"></input>
+                            </div>
+
+                            <div class="input-1">
+                                <label class="form-label">Department *</label>
+                                <input type="text" class="form-control" placeholder="*No education qualification available" name="" id="inputeducational"></input> 
+                            </div>
+
+                            <div class="input-1">
+                                <label class="form-label">Employment periode *</label>
+                                <div class="date">
+                                    <input type="date" class="form-control" placeholder="*No education qualification available" name="" id="inputeducational"></input>
+                                    <p>to</p>
+                                    <input type="date" class="form-control" placeholder="*No education qualification available" name="" id="inputeducational"></input>
+                                </div>
+                            </div>
+
+                            <div class="respon">
+                                <label class="form-label">Responsibilities *</label>
+                                <input type="text" class="form-control" placeholder="*No education qualification available" name="" id="inputeducational"></input> 
+                            </div>
+                        <button type="button" class="btn btn-danger" style="border: none; border-radius: 25px; height: 50px; width: 170px; margin-top: 40px;">Add Company</button>
                     </div>
+                    
                 </div>
 
                 <div class="other">
@@ -196,7 +245,7 @@
         let title = document.querySelector(".edu .opening h3")
         let text = document.querySelector(".dihapus");
         btn.addEventListener("click", ()=>{
-            let divTag = `<textarea class="form-control" placeholder="*No education qualification available" name="" id="inputeducational" style="height: 130px; border: none;"></textarea>`;
+            let divTag = ``;
             let deleteTag = ` <span style="" id="delete"><i class="fa-solid fa-circle-xmark"></i></span> `
             textarea.insertAdjacentHTML("afterbegin", divTag );
             title.insertAdjacentHTML("afterend", deleteTag);

@@ -2,7 +2,6 @@
 
 body{
     font-family: 'Poppins', sans-serif;
-    background-color: #FFF8F2;
 }
 
 /* Judul */
@@ -24,6 +23,16 @@ body{
     margin: 25px 80px 0 45%;
 }
 /* ------------------------------------------------ */
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -96,6 +105,22 @@ body{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Form */
 .input .opening{
     margin: 5% 0 20px 10%;
@@ -158,10 +183,24 @@ body{
     transition: all 3s step-start;
 }
 
-.input .edu .textarea textarea{
-    margin-top: 20px;
+.input .edu .textarea .form-edu{
+    display: flex;
+    flex-wrap: wrap;
 }
 
+.input .edu .textarea .form-edu .input-1{
+    height: 50px;  
+    width: 45%; 
+    margin-right: 50px;
+    margin-top: 50px;
+}
+
+.input .edu .textarea .form-edu .input-1 input{
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #D9D9D94D;
+}
 
 .input .employ{
     margin-top: 8%;
@@ -172,13 +211,53 @@ body{
     margin-top: 10px;
 }
 
-.input .employ .textarea{
+.input .employ .form-employ{
+    display: flex;
+    flex-wrap: wrap;
     width: 80%;
-    height: 230px;
+    height: 470px;
     background-color: white;
     padding: 20px;
     border-radius: 10px;
     margin: auto
+}
+
+.input .employ .form-employ .input-1{
+    height: 50px;  
+    width: 45%; 
+    margin-right: 50px;
+    margin-top: 30px;
+}
+
+.input .employ .form-employ .input-1 input{
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #D9D9D94D;
+}
+
+.date {
+    display: flex;
+}
+
+.date p{
+    margin: auto 10px;
+}
+
+.respon{
+    width: 100%;
+    height: 100px;
+    max-height: 100px;
+    margin-right: 50px;
+    margin-top: 30px;
+}
+
+.respon input{
+    height: 100px;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #D9D9D94D;
 }
 
 .input .other .salary{
