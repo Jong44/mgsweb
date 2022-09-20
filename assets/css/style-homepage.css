@@ -1,0 +1,147 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Poppins&display=swap');
+
+.head{
+    display: flex;
+    margin: 7% 10% 0 10%;
+}
+
+    
+.head .gambarr {
+    width: 60%;
+    padding-left: 250px;
+}
+
+.head .kata{
+    width: 50%;
+}
+
+
+.head .kata h3{
+    margin: 0;
+    display: flex;
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.head .kata h3 .merah{
+    margin: 0 17px;
+    color: red;
+    font-weight: bold;
+}
+
+.head .kata p{
+    font-size: 18px;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+
+.head .kata button.btn-danger{
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 20px;
+    border: transparent;
+}
+
+.head .kata button.btn-danger:hover{
+    background-color: #830400;
+}
+
+.content {
+    align-items: center;
+    justify-content: center;
+    min-height: 700px;
+    margin-top: 100px;
+}
+.content .container{
+    text-align: center;
+}
+
+.content .container h3{
+    font-size: 56px;
+    font-weight:bolder;
+}
+
+.content .container #CarouselSlider {
+    max-height: 100vh;
+    overflow: hidden;
+}
+.content .container .carousel-caption {
+    right: initial;
+    top: 35%;
+    bottom: initial;
+    padding-bottom: 1.25rem;
+    text-align: left;
+}
+.content .container .carousel-caption {
+    background-color: rgb(0 0 0 / 22%);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.col{
+    margin-top: 50px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.service{
+    padding: 50px;
+    border: solid 1px #D73A34;
+    border-radius: 30px;
+    align-items: center;
+}
+
+.service .icon{
+    background-color: #FFDBDA;
+    width: 100px;
+    padding-top: 13px;
+    height: 100px;
+    border-radius: 100%;
+    margin: auto;
+    font-size: 50px;
+    color: #D73A34;
+    
+}
+
+.service h5{
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.service p{
+    margin-top: 20px;
+}
+
+.content .container .col img{
+    width: 70%;
+}
+
+.content .container .container1{
+
+    padding: 30px 200px;
+    text-align: justify;
+
+}
+
+.content .container .container1 p{
+    font-size: 28px;
+    font-family: Plus Jakarta Sans ;
+}
+
+.quote-right i{
+    color: #D73A34;
+    margin-top: 1em;
+    margin-left: 20em;
+    font-size: 50px;
+}
+
+.quote-left i{
+    color: #D73A34;
+    margin-right: 20em;
+    font-size: 50px;
+}
