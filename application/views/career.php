@@ -39,111 +39,24 @@
     </div>
 
     <div class="jadwal">
+        <?php foreach ($career as $c) :?>
         <div class="box1">
             <div class="row row-cols-4">
                 <div class="col-sm-3">
-                    <h3>Business Analyst</h3>
+                    <h3><?= $c['nama_job'] ?></h3>
                     </i><i class="fa-solid fa-briefcase"></i>PT Mega Giga Solusindo
                 </div>
                 <div class="col-sm-3" style='margin-top: 45px'>
-                    </i><i class="fa-solid fa-location-dot"></i>Indonesia
+                    </i><i class="fa-solid fa-location-dot"></i><?= $c['country'] ?>
                 </div>
                 <div class="col-sm-3">
-                    <h5>30 September 2022</h5>
+                    <h5><?= $c['exp_date'] ?></h5>
                     <p>no of vacancies</p>
                 </div>
-                <a class="btn" href="<?= base_url('user/apply')?>">Applyy</a>
+                <a class="btn" href="<?= base_url('user/apply')?>/<?= $c['id_job'] ?>">Apply</a>
             </div>
         </div>
-
-        <div class="box2">
-            <div class="row row-cols-4">
-                <div class="col-sm-3">
-                    <h3>Business Analyst</h3>
-                    </i><i class="fa-solid fa-briefcase"></i>PT Mega Giga Solusindo
-                </div>
-                <div class="col-sm-3" style='margin-top: 45px'>
-                    </i><i class="fa-solid fa-location-dot"></i>Indonesia
-                </div>
-                <div class="col-sm-3">
-                    <h5>30 September 2022</h5>
-                    <p>no of vacancies</p>
-                </div>
-                <button class="btn">Apply</button>
-            </div>
-        </div>
-
-        <div class="box3">
-            <div class="row row-cols-4">
-                <div class="col-sm-3">
-                    <h3>Business Analyst</h3>
-                    </i><i class="fa-solid fa-briefcase"></i>PT Mega Giga Solusindo
-                </div>
-                <div class="col-sm-3" style='margin-top: 45px'>
-                    </i><i class="fa-solid fa-location-dot"></i>Indonesia
-                </div>
-                <div class="col-sm-3">
-                    <h5>30 September 2022</h5>
-                    <p>no of vacancies</p>
-                </div>
-                <button class="btn">Apply</button>
-            </div>
-        </div>
-
-        <div class="box4">
-            <div class="row row-cols-4">
-                <div class="col-sm-3">
-                    <h3>Business Analyst</h3>
-                    </i><i class="fa-solid fa-briefcase"></i>PT Mega Giga Solusindo
-                </div>
-                <div class="col-sm-3" style='margin-top: 45px'>
-                    </i><i class="fa-solid fa-location-dot"></i>Indonesia
-                </div>
-                <div class="col-sm-3">
-                    <h5>30 September 2022</h5>
-                    <p>no of vacancies</p>
-                </div>
-                <button class="btn">Apply</button>
-            </div>
-        </div>
-
-        <div class="box5">
-            <div class="row row-cols-4">
-                <div class="col-sm-3">
-                    <h3>Business Analyst</h3>
-                    </i><i class="fa-solid fa-briefcase"></i>PT Mega Giga Solusindo
-                </div>
-                <div class="col-sm-3" style='margin-top: 45px'>
-                    </i><i class="fa-solid fa-location-dot"></i>Indonesia
-                </div>
-                <div class="col-sm-3">
-                    <h5>30 September 2022</h5>
-                    <p>no of vacancies</p>
-                </div>
-                <button class="btn">Apply</button>
-            </div>
-        </div>
-
-        <div class="box6">
-            <div class="row row-cols-4">
-                <div class="col-sm-3">
-                    <h3>Business Analyst</h3>
-                    </i><i class="fa-solid fa-briefcase"></i>PT Mega Giga Solusindo
-                </div>
-                <div class="col-sm-3" style='margin-top: 45px'>
-                    </i><i class="fa-solid fa-location-dot"></i>Indonesia
-                </div>
-                <div class="col-sm-3">
-                    <h5>30 September 2022</h5>
-                    <p>no of vacancies</p>
-                </div>
-                <button class="btn">Apply</button>
-               
-            </div>
-        </div>
-
-
-
+        <?php endforeach ?>
 
         <div class="form1">
             <div class="kotak">

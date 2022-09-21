@@ -19,7 +19,7 @@
     <div class="title">
         <h1>PT. Mega Giga Solusindo</h1>
         <div class="jobtitle">
-            <p>Job Title : </p>
+            <p>Job Title : <?= $career['nama_job'] ?></p>
         </div>
     </div>
     <div class="container1">
@@ -55,33 +55,33 @@
             <h3>Basic Information</h3>
         </div>
         <div class="formulir">
-            <form>
+            <form action="" method="post">
                 <div class="kiri">
-                    
+                    <input type="hidden" name="id_job" value="<?= $career['id_job'] ?>">
                         <div class="mb-3">
                             <label class="form-label">First Name</label>
-                            <input type="text" class="form-control" id="inputfirstname" name="" placeholder="First name" required>
+                            <input type="text" class="form-control" id="inputfirstname" name="first_name" placeholder="First name" required>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Email Address</label>
-                            <input type="email" class="form-control" id="inputemail" name="" placeholder="Email Address" required>
+                            <input type="email" class="form-control" id="inputemail" name="email" placeholder="Email Address" required>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Nationality</label>
-                            <select id="selectnationality" class="form-select" name="">
-                                <option>Select Nationality</option>
-                                <option>Izaz</option>
-                                <option>Gans</option>
-                                <option>Parah</option>
+                            <select id="selectnationality" class="form-select" name="nationality">
+                                <option disabled selected>Select Nationality</option>
+                                <option value="Indonesia">Indonesia</option>
+                                <option value="Korea">Korea</option>
+                                <option value="Jepang">Jepang</option>
                             </select>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Gender</label>
-                            <select id="selectnationality" class="form-select" name="" required>
-                                <option>None</option>
-                                <option>Male</option>
-                                <option>Female</option>
-                                <option>Other</option>
+                            <select id="selectnationality" class="form-select" name="gender" required>
+                                <option disabled selected>Select Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
                             </select>
                         </div>
                     
@@ -89,15 +89,15 @@
                 <div class="kanan">
                         <div class="mb-3">
                             <label class="form-label">Last Name</label>
-                            <input type="text" class="form-control" id="inputfirstname" placeholder="Last name" name="" required>
+                            <input type="text" class="form-control" id="inputfirstname" placeholder="Last name" name="last_name" required>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Phone Number</label>                            
-                            <input type="text" class="form-control" id="inputemail" name="" placeholder="+62" required>
+                            <input type="text" class="form-control" id="inputemail" name="no_hp" placeholder="+62" required>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Date of birth</label>
-                            <input type="date" class="form-control" id="inputemail" name="" placeholder="mm/dd/yyyy" required>
+                            <input type="date" class="form-control" id="inputemail" name="tgl_lahir" placeholder="mm/dd/yyyy" required>
                         </div>
                     </div>
                 </div>
@@ -113,7 +113,110 @@
                         <div class="dihapus">
                             <p>No employment record available!</p>
                         </div>
-                        <div class="form-edu">
+                        
+                        <button type="button" class="btn btn-danger" style="border: none; border-radius: 25px; height: 50px; width: 170px; margin-top: 50px;" id="eduBtn">Add Academy</button>
+                    </div>
+                </div>
+
+                <div class="employ">
+                    <div class="opening">
+                        <div class="icon">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <h3>Employment History</h3>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                            I have no employment record
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-employ">
+                            
+                        <button type="button" id="btnEmploy" class="btn btn-danger" style="border: none; border-radius: 25px; height: 50px; width: 170px; margin-top: 40px;">Add Company</button>
+                    </div>
+                    
+                </div>
+
+                <div class="other">
+                    <div class="opening">
+                        <div class="icon">
+                            <i class="fa-solid fa-border-all"></i>
+                        </div>
+                        <h3>Other</h3>
+                    </div>
+                    <div class="salary">
+                            <div class="mb-3">
+                                <label class="form-label">Expected salary*</label>
+                                <input type="text" class="form-control" id="inputsalary" name="expected_salary" placeholder="Expected salary">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Linkedin profile link*</label>
+                                <input type="text" class="form-control" id="inputlinked" name="linked" placeholder="www.linkedin.com/in.">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Facebook profile link*</label>
+                                <input type="text" class="form-control" id="inputfacebook" name="fb" placeholder="*www.facebook.com/">
+                            </div>
+                    </div>
+                </div>
+
+                <div class="document">
+                    <div class="opening">
+                        <div class="icon">
+                            <i class="fa-solid fa-floppy-disk"></i>
+                        </div>
+                        <h3>Document</h3>
+                    </div>
+                    <div class="upload">
+                        <div class="profile">
+                            <p class="bold">Provide Resume</p>
+                            <p>*You can upload only JPG, JPEG, PNG</p>
+                            <div class="img-area">
+                                <img id="preview">
+                                <div class="icon-profile" id="iconProfile">
+                                    <i class="fa-solid fa-user"></i>
+                                </div>
+                            </div>
+                            <input type="file" accept="image/jpg,image/jpeg,image/png" name="filefoto" onchange="previewImage(event)" id="file_foto" required >
+                        </div>    
+                        
+                        <div class="cv">
+                            <p class="bold">Provide Resume</p>
+                            <p>*You can upload only PDF of size up to 5MB</p>
+                            <p>*Or you can provide resume link</p>
+                            <input type="file" accept="application/pdf" name="filepdf" id="file_foto">
+                        </div>
+                    </div>
+                    <div class="btn-submit">
+                        <a class="cancel">Back</a>
+                        <button type="submit">Save and Continue</button>   
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        // preview
+        const previewImage = e => {
+            const reader = new FileReader();
+            reader.readAsDataURL(e.target.files[0]);
+            reader.onload = () => {
+                const preview = document.getElementById('preview');
+                const icon = document.querySelector('#iconProfile');
+                icon.style.display = "none";
+                preview.style.display = "block";
+                preview.src = reader.result;
+            }
+        }
+
+        // education
+        let btn = document.querySelector("#eduBtn");
+        let textarea = document.querySelector(".textarea");
+        let title = document.querySelector(".edu .opening h3")
+        let text = document.querySelector(".dihapus");
+        btn.addEventListener("click", ()=>{
+            let divTag = `<div class="form-edu">
                             <div class="input-1">
                                 <label class="form-label">level of education *</label>
                                 <input type="text" class="form-control" placeholder="*No education qualification available" name="" id="inputeducational"></input>
@@ -133,26 +236,18 @@
                                 <label class="form-label">Institute name *</label>
                                 <input type="text" class="form-control" placeholder="*No education qualification available" name="" id="inputeducational"></input>
                             </div>
-                        </div>
-                        <button type="button" class="btn btn-danger" style="border: none; border-radius: 25px; height: 50px; width: 170px; margin-top: 50px;" id="eduBtn">Add Academy</button>
-                    </div>
-                </div>
+                        </div>`;
+            let deleteTag = ` <span style="" id="delete"><i class="fa-solid fa-circle-xmark"></i></span> `
+            textarea.insertAdjacentHTML("afterbegin", divTag );
+            title.insertAdjacentHTML("afterend", deleteTag);
+            text.remove();
+        });
 
-                <div class="employ">
-                    <div class="opening">
-                        <div class="icon">
-                            <i class="fa-solid fa-briefcase"></i>
-                        </div>
-                        <h3>Employment History</h3>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
-                            I have no employment record
-                            </label>
-                        </div>
-                    </div>
-                    <div class="form-employ">
-                            <div class="input-1">
+        // employy
+        let btnEmploy = document.querySelector("#btnEmploy");
+        let formEmploy = document.querySelector(".form-employ");
+        btnEmploy.addEventListener("click", ()=>{
+            let formtext=`<div class="input-1">
                                 <label class="form-label">Company name *</label>
                                 <input type="text" class="form-control" placeholder="*No education qualification available" name="" id="inputeducational"></input>
                             </div>
@@ -179,77 +274,9 @@
                             <div class="respon">
                                 <label class="form-label">Responsibilities *</label>
                                 <input type="text" class="form-control" placeholder="*No education qualification available" name="" id="inputeducational"></input> 
-                            </div>
-                        <button type="button" class="btn btn-danger" style="border: none; border-radius: 25px; height: 50px; width: 170px; margin-top: 40px;">Add Company</button>
-                    </div>
-                    
-                </div>
+                            </div>`;
+            formEmploy.insertAdjacentHTML("afterbegin", formtext );            
 
-                <div class="other">
-                    <div class="opening">
-                        <div class="icon">
-                            <i class="fa-solid fa-border-all"></i>
-                        </div>
-                        <h3>Other</h3>
-                    </div>
-                    <div class="salary">
-                            <div class="mb-3">
-                                <label class="form-label">Expected salary*</label>
-                                <input type="text" class="form-control" id="inputsalary" placeholder="Expected salary">
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Linkedin profile link*</label>
-                                <input type="text" class="form-control" id="inputlinked" placeholder="www.linkedin.com/in.">
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Facebook profile link*</label>
-                                <input type="text" class="form-control" id="inputfacebook" placeholder="*www.facebook.com/">
-                            </div>
-                    </div>
-                </div>
-
-                <div class="document">
-                    <div class="opening">
-                        <div class="icon">
-                            <i class="fa-solid fa-floppy-disk"></i>
-                        </div>
-                        <h3>Document</h3>
-                    </div>
-                    <div class="upload">
-                        <div class="profile">
-                            <input type="file" id="default" accept="image/*" hidden>
-                            <div class="img-area">
-                                <div class="pict">
-                                    <img src="izaz.jpeg" alt="">
-                                </div>
-                                <h3>Upload Photo</h3>
-                                <p>*You can upload JPG, JPEG, PNG size must be less than <span>2MB</span></p>
-                                <i class="fa-solid fa-circle-user"></i>
-                            </div>
-                            <button onclick = "defaultbtnActive()" id="custom">Choose File</button>
-                            <div class="file-name">File name here</div>
-                        </div>    
-                        
-                        <div class="cv">
-                            <p>egfjhdcksxmz</p>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-    <script>
-        // education
-        let btn = document.querySelector("#eduBtn");
-        let textarea = document.querySelector(".textarea");
-        let title = document.querySelector(".edu .opening h3")
-        let text = document.querySelector(".dihapus");
-        btn.addEventListener("click", ()=>{
-            let divTag = ``;
-            let deleteTag = ` <span style="" id="delete"><i class="fa-solid fa-circle-xmark"></i></span> `
-            textarea.insertAdjacentHTML("afterbegin", divTag );
-            title.insertAdjacentHTML("afterend", deleteTag);
-            text.remove();
-        });
+        })
     </script>   
 </body>
