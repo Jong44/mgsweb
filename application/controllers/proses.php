@@ -2,15 +2,22 @@
 
 class proses extends CI_Controller{
 
+    public function __construct()
+	{
+		parent::__construct();
+		$this->load->model('user_model');
+		$this->load->library('upload');
+		$this->load->helper('date');
+	}
 
     public function saveForm()
     {
-        $config['upload_path'] = './assets/img/job/';
+        $config['upload_path'] = './assets/img/candidates/';
         $config['allowed_types'] = 'jpg|jpeg|png';
         $gbr = $this->upload->data();
         $first_name = $this->input->post('first_name');
         $last_name = $this->input->post('last_name');
-        $full_name = $first_name.''.$last_name;
+        $full_name = $first_name.' '.$last_name;
         $filename = $full_name.$gbr['file_ext'];
         $config['file_name'] = $filename;
 
@@ -39,6 +46,9 @@ class proses extends CI_Controller{
 				$id_job = $this->input->post('id_job');
                 $first_name = $this->input->post('first_name');
 				$last_name = $this->input->post('last_name');
+                $getCategory = $this->user_model->getCategory($id_job);
+                $g = $getCategory->row_array();
+                $category = $g['nama_job'];
 				$email = $this->input->post('email');
 				$nationality = $this->input->post('nationality');
 				$gender = $this->input->post('gender');
@@ -47,15 +57,17 @@ class proses extends CI_Controller{
 				$expected_salary = $this->input->post('expected_salary');
 				$linked = $this->input->post('linked');
 				$fb = $this->input->post('fb');
-                $this->user_model->updateJobs($id_job,$first_name,$last_name,$full_name,$email,$nationality,$gender,$no_hp,$tgl_lahir,$expected_salary,$linked,$fb,$gambar);
-                redirect('user');
+                $this->user_model->saveForm($id_job,$first_name,$last_name,$full_name,$category,$email,$nationality,$gender,$no_hp,$tgl_lahir,$expected_salary,$linked,$fb,$gambar);
+                $this->user_model->notifAdd($full_name,$category);
+                redirect();
             } else {
                 $this->session->set_flashdata('pesan', 'Failed Add Jobs');
-                redirect('user');
+                redirect();
             }
      
         } else {
-			redirect('user');
+            $this->session->set_flashdata('pesan', 'Failed Add Jobs');
+			redirect();
         }
 
     }

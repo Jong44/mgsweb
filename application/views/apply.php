@@ -55,7 +55,7 @@
             <h3>Basic Information</h3>
         </div>
         <div class="formulir">
-            <form action="" method="post">
+            <form action="<?= base_url('proses/saveForm')?>" method="post" enctype="multipart/form-data">
                 <div class="kiri">
                     <input type="hidden" name="id_job" value="<?= $career['id_job'] ?>">
                         <div class="mb-3">
