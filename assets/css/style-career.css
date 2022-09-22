@@ -47,6 +47,7 @@ a{
     margin-top: 20px;
     padding: 10px 30px 10px 30px;
     border-radius: 20px;
+    width: 150px;
     border: transparent;
 }
 
@@ -78,67 +79,7 @@ a{
 }
 
 .jadwal .box1{
-    width: 80%;
-    background-color: white;
-    height: 5%;
-    margin-left: 7%;
-    margin-top: 5%;
-    padding-top: 15px;
-    padding-bottom: 10px;
-    padding-left: 30px;
-    border-radius: 10px;
-}
-
-.jadwal .box2{
-    width: 80%;
-    background-color: white;
-    height: 5%;
-    margin-left: 7%;
-    margin-top: 5%;
-    padding-top: 15px;
-    padding-bottom: 10px;
-    padding-left: 30px;
-    border-radius: 10px;
-}
-
-.jadwal .box3{
-    width: 80%;
-    background-color: white;
-    height: 5%;
-    margin-left: 7%;
-    margin-top: 5%;
-    padding-top: 15px;
-    padding-bottom: 10px;
-    padding-left: 30px;
-    border-radius: 10px;
-}
-
-.jadwal .box4{
-    width: 80%;
-    background-color: white;
-    height: 5%;
-    margin-left: 7%;
-    margin-top: 5%;
-    padding-top: 15px;
-    padding-bottom: 10px;
-    padding-left: 30px;
-    border-radius: 10px;
-}
-
-.jadwal .box5{
-    width: 80%;
-    background-color: white;
-    height: 5%;
-    margin-left: 7%;
-    margin-top: 5%;
-    padding-top: 15px;
-    padding-bottom: 10px;
-    padding-left: 30px;
-    border-radius: 10px;
-}
-
-.jadwal .box6{
-    width: 80%;
+    width: 85%;
     background-color: white;
     height: 5%;
     margin-left: 7%;
@@ -154,18 +95,26 @@ a{
     margin-right: 5px;
 }
 
-.box1 .btn, .box2 .btn, .box3 .btn,.box4 .btn,.box5 .btn, .box6 .btn{
+.jadwal .box1 .row .col-sm-3 h3{
+    font-size: 24px;
+}
+
+.jadwal .box1 .row .col-sm-3 h5{
+    font-size: 18px;
+}
+
+.box1 .btn{
     background: #FFDBDA;
     color: #D73A34;
     margin-left: 5%;
     margin-top: 5px;
-    border-radius: 20px;
+    border-radius: 25px;
     border: transparent;
-    width: 10%;
-    height: 50px;
+    width: 13%;
+    height: 47px;
     padding: 12px 0;
 }
-.box1 .btn:hover, .box2 .btn:hover, .box3 .btn:hover,.box4 .btn:hover,.box5 .btn:hover, .box6 .btn:hover{
+.box1 .btn:hover{
     background: #D73A34;
     color: white;
 }

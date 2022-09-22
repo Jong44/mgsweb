@@ -123,7 +123,7 @@
                         <div class="icon">
                             <i class="fa-solid fa-briefcase"></i>
                         </div>
-                        <h3>Employment History</h3>
+                        <h3>Employment History</h3> 
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                             <label class="form-check-label" for="flexCheckDefault">
@@ -132,7 +132,7 @@
                         </div>
                     </div>
                     <div class="form-employ">
-                            
+                    <p>No employment record available!</p>
                         <button type="button" id="btnEmploy" class="btn btn-danger" style="border: none; border-radius: 25px; height: 50px; width: 170px; margin-top: 40px;">Add Company</button>
                     </div>
                     

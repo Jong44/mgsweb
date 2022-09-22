@@ -4,10 +4,85 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
+.overlay{
+    width: 100%;
+    height: 750px;
+    background-color: black;
+    position: absolute;
+    opacity: 0.3;
+    z-index: 6;
+}
+
+.start .gambar{
+    width: 100%;
+    height: 700px;
+}
+
 .start .gambar img{
-    z-index: 1;
-    max-width: 100%;
-    max-width: 100%;
-    width: 50%;
-    margin-top: 10%;
+    z-index: 5;
+    width: 100%;
+    height: 750px;
+}
+
+.start .textjudul{
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    margin-top: 20%;
+}
+
+.start .textjudul h1{
+    position: relative;
+    z-index: 10;
+    font-size: 56px;
+    font-weight: 700;
+    color: white;
+}
+
+.middle{
+    display: flex;
+    height: 900px;
+}
+
+.middle .left{
+    background-color: white;
+    margin-left: 5%;
+    border-radius: 10px;
+    width: 30%;
+    padding: 20px;
+    position: absolute;
+    z-index: 10;
+}
+
+.middle .left .title{
+    display: flex;
+}
+
+.middle .left .title .logo{
+    background-color: white;
+    border: solid 5px grey;
+    border-radius: 5px;
+    width: 26%;
+    height: 100px;
+}
+
+.middle .left .title .logo img{
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    object-fit: contain;
+}
+
+.middle .left .title .nama-pt{
+    margin-left: 10px;
+}
+
+.middle .left .title .nama-pt .lokasi{
+    display: flex;
+}
+
+.middle .left .title .nama-pt .lokasi i{
+    margin-right: 10px;
+    font-size: 20px;
 }
