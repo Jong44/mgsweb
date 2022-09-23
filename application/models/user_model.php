@@ -35,6 +35,11 @@ class user_model extends CI_Model{
         return $query;
     }
 
+    public function getCandidates($id_candidates)
+    {
+        return $this->db->get_where('candidates',['id_candidates' => $id_candidates])->row_array();
+    }
+
     
 
 }
