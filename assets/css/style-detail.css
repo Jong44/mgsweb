@@ -41,7 +41,7 @@ body{
 
 .middle{
     display: flex;
-    height: 900px;
+    height: 700px;
 }
 
 .middle .left{
@@ -49,7 +49,8 @@ body{
     margin-left: 5%;
     border-radius: 10px;
     width: 30%;
-    padding: 20px;
+    height: 750px;
+    padding: 50px;
     position: absolute;
     z-index: 10;
 }
@@ -60,9 +61,9 @@ body{
 
 .middle .left .title .logo{
     background-color: white;
-    border: solid 5px grey;
+    border: solid 5px #8ebffa;
     border-radius: 5px;
-    width: 26%;
+    width: 40%;
     height: 100px;
 }
 
@@ -75,7 +76,12 @@ body{
 }
 
 .middle .left .title .nama-pt{
-    margin-left: 10px;
+    margin-left: 20px;
+}
+
+.middle .left .title .nama-pt h3{
+    font-size: 30px;
+    font-weight: 600;
 }
 
 .middle .left .title .nama-pt .lokasi{
@@ -85,4 +91,220 @@ body{
 .middle .left .title .nama-pt .lokasi i{
     margin-right: 10px;
     font-size: 20px;
+}
+
+.middle .left .content{
+    margin-top: 20%;
+    display: flex;
+}
+
+.middle .left .content .isi{
+    width: 150px;
+}
+
+.middle .left .content .isi p{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+.middle .left .content .titik-2 p{
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.middle .left .button{
+    background-color: #4093f9;
+    border-radius: 10px;
+    width: 40%;
+    height: 50px;
+    margin-top: 30px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.middle .left .button:hover{
+    background-color: red;
+}
+
+.middle .left .button a{
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.middle .left .sosial{
+    display: flex;
+    margin-top: 30px;
+}
+
+.middle .left .sosial .logo-sosial{
+    display: flex;
+    margin-left: 10px;
+}
+
+.middle .left .sosial .text{
+    margin-top: 5px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #4093f9;
+}
+
+.middle .left .sosial .logo-sosial i{
+    padding: 10px;
+}
+
+.middle .left .sosial .logo-sosial .fb{
+    background-color: #8ebffa;
+    padding-left: 3px;
+    width: 40px;
+    color: #4093f9;
+    border-radius: 100px;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.middle .left .sosial .logo-sosial .twitter{
+    background-color: #8ebffa;
+    color: #4093f9;
+    width: 40px;
+    border-radius: 100px;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.middle .left .sosial .logo-sosial .linkedin{
+    background-color: #8ebffa;
+    color: #4093f9;
+    width: 40px;
+    border-radius: 100px;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* kanan */
+.right{
+    position: absolute;
+    margin-top: 5%;
+    top: 100%;
+    left: 40%;
+    width: 100%;
+}
+
+.right .description .flex{
+    display: flex;
+}
+
+.right .description .flex .icon {
+    background-color: #8ebffa;
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+    padding-top: 5px;
+    padding-left: 15px;
+}
+
+.right .description .flex .icon i{
+    color: #4093f9;
+    font-size: 56px;
+    text-align: center;
+}
+
+.right .description .flex .judul-desc{
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.right .description .flex .judul-desc h3{
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.right .skills .title{
+    margin-top: 5%;
+    display: flex;
+}
+
+.right .skills .title .icon{
+    background-color: #8ebffa;
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+    padding-top: 5px;
+    padding-left: 15px;
+}
+
+.right .skills .title .icon i{
+    color: #4093f9;
+    font-size: 56px;
+    text-align: center;
+}
+
+.right .skills .title .judul{
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.right .skills .title .judul h3{
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.right .skills .flex{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 5%;
+    width: 50%;
+}
+
+.right .skills .flex .one{
+    height: 40px;
+    width: 50%;
+    padding: 10px;
+    margin-right: 10px;
+    background-color: yellow;
+    border-radius: 25px;
+}
+
+
+.right .skills .flex .two{
+    height: 40px;
+    width: 50%;
+    padding: 10px;
+    margin-right: 10px;
+    background-color: red;
+    border-radius: 25px;
+}
+
+.right .skills .flex .three{
+    height: 40px;
+    width: 50%;
+    padding: 10px;
+    margin-right: 10px;
+    background-color: green;
+    border-radius: 25px;
+}
+
+.right .skills .flex .four{
+    height: 40px;
+    width: 50%;
+    padding: 10px;
+    margin-right: 10px;
+    background-color: blue;
+    border-radius: 25px;
 }

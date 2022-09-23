@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Judul */
+.title{
+    margin-top: 7%;
+}
+
+
+.title h1{
+    font-size: 50px;
+    font-weight: 700;
+    margin: 50px 80px 0 480px;
+}
+
+.title .jobtitle p{
+
+    font-size: 20px;
+    font-weight: 600;
+    margin: 25px 80px 0 45%;
+}
+
+.container1{
+    display: flex;
+    margin-top: 80px;
+}
+
+.container1 .square1{
+    margin: 50px 0 0 22%;
+}
+
+.container1 .square1 .iconcheck{
+    background-color: #9F9C9C;
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+    margin-left: 50px;
+}
+
+.container1 .square1 .iconcheck i{
+    color: white;
+    margin: 15px;
+    font-size: 40px;
+}
+
+.container1 .hr{
+    border-bottom: 3px dashed;
+    width: 38%;
+    color:#9F9C9C;
+    height: 80px;
+}
+
+.container1 .square2{
+    margin: 50px 0 0 3%;
+}
+
+.container1 .square2 .iconcheck{
+    background-color: #60CF83;
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+}
+
+.container1 .square2 .iconcheck i{
+    color: white;
+    margin: 15px;
+    font-size: 40px;
+}
+
+.container1 .square2 .text p{
+    margin-left: 5px;
+}
+
+.attention{
+    margin-top: 10px;
+}
+
+.attention p{
+    font-size: 20px;
+    font-weight: 400;
+    margin-left: 34%;
+}
+
+.input .opening{
+    display: flex;
+    margin-top: 10%;
+    margin-left: 10%;
+}
+
+.input .opening .icon i{
+    color: red;
+    font-size: 40px;
+    margin-right: 10px;
+}
+
+.input .opening h3{
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 5px;
+}

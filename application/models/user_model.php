@@ -35,9 +35,9 @@ class user_model extends CI_Model{
         return $query;
     }
 
-    public function getCandidates($id_candidates)
+    public function getCandidates($full_name)
     {
-        return $this->db->get_where('candidates',['id_candidates' => $id_candidates])->row_array();
+        return $this->db->get_where('candidates',['full_name' => $full_name])->row_array();
     }
 
     

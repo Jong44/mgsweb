@@ -58,7 +58,7 @@ class proses extends CI_Controller{
 				$linked = $this->input->post('linked');
 				$fb = $this->input->post('fb');
                 $this->user_model->saveForm($id_job,$first_name,$last_name,$full_name,$category,$email,$nationality,$gender,$no_hp,$tgl_lahir,$expected_salary,$linked,$fb,$gambar);
-                redirect('user/preview'.$full_name.$category);
+                redirect('user/preview'.$full_name);
             } else {
                 $this->session->set_flashdata('pesan', 'Failed Apply Jobs');
                 redirect();

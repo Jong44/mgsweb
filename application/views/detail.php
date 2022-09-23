@@ -40,6 +40,74 @@
                     </div>
                 </div>
             </div>
+            <div class="content">
+                <div class="isi">
+                    <p>Job Title</p>
+                    <p>Vacancien</p>
+                    <p>Salary</p>
+                    <p>Office Time</p>
+                    <p>Location</p>
+                    <p>Job Type</p>
+                    <p>Deadline</p>
+                </div>
+                <div class="titik-2">
+                    <p>: </p>
+                    <p>: </p>
+                    <p>: </p>
+                    <p>: </p>
+                    <p>: </p>
+                    <p>: </p>
+                    <p>: </p>
+                </div>
+            </div>
+            <div class="button">
+                <a href="#">Apply Now</a>
+            </div>
+            <div class="sosial">
+                <div class="text">Share on :</div>
+                <div class="logo-sosial">
+                    <div class="fb"><i class="fa-brands fa-facebook-f"></i></div>
+                    <div class="twitter"><i class="fa-brands fa-twitter"></i></div>
+                    <div class="linkedin"><i class="fa-brands fa-linkedin-in"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="description">
+                <div class="flex">
+                    <div class="icon"><i class="fa-solid fa-clipboard"></i></div>
+                    <div class="judul-desc">
+                        <h3>Company Description</h3>
+                    </div>
+                </div>
+                <div class="isi-desc">
+
+                </div>
+            </div>
+
+            <div class="skills">
+                <div class="title">
+                    <div class="icon"><i class="fa-solid fa-pen-nib"></i></div>
+                    <div class="judul">
+                        <h3>Skills</h3>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="one">
+                        <p>Contoh</p>
+                    </div>
+                    <div class="two">
+                        <p>Contoh</p>
+                    </div>
+                    <div class="three">
+                        <p>Contoh</p>
+                    </div>
+                    <div class="four">
+                        <p>Contoh</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>

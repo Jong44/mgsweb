@@ -49,9 +49,9 @@ class user extends CI_Controller {
 		$this->load->view('paartials/footer');
 	}
 
-	public function preview($id_candidates)
+	public function preview()
 	{
-		$data['candidates'] = $this->user_model->getIdJob($id_job);
+		
 		$this->load->view('paartials/navbar');
 		$this->load->view('preview');
 		$this->load->view('paartials/footer');
