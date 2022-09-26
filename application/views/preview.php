@@ -54,5 +54,89 @@
             </div>
             <h3>Basic Information</h3>
         </div>
-           
+
+        <div class="personal-information">
+            <div class="kiri">
+                <div class="first-name kotak">
+                    <label class="form-label">First Name</label>
+                    <input type="text" id="" class="form-control" value="fefc" disabled></input>
+                </div>
+                <div class="email-address kotak">
+                    <label class="form-label">Email Address</label>
+                    <input type="text" id="" class="form-control" value="" disabled></input>
+                </div>
+                <div class="nationality kotak">
+                    <label class="form-label">Nationality</label>
+                    <input type="text" id="" class="form-control" value="" disabled></input>
+                </div>
+                <div class="gender kotak">
+                    <label class="form-label">Gender</label>
+                    <input type="text" id="" class="form-control" value="" disabled></input>
+                </div>
+            </div>
+            <div class="kanan">
+                <div class="last-name kotak">
+                    <label class="form-label">Last Name</label>
+                    <input type="text" id="" class="form-control" value="" disabled></input>
+                </div>
+                <div class="phone-number kotak">
+                    <label class="form-label">Phone Number</label>
+                    <input type="text" id="" class="form-control" value="" disabled></input>
+                </div>
+                <div class="date-of-birth kotak">
+                    <label class="form-label">Date of birth</label>
+                    <input type="text" id="" class="form-control" value="" disabled></input>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="other">
+        <div class="opening">
+            <div class="icon">
+                <i class="fa-solid fa-border-all"></i>
+            </div>
+            <h3>Other</h3>
+        </div>
+        <div class="salary">
+            <div class="mb-3">
+                <label class="form-label">Expected salary*</label>
+                <input type="text" class="form-control" id="inputsalary" name="expected_salary" value="" disabled></input>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Linkedin profile link*</label>
+                <input type="text" class="form-control" id="" name="" value="" disabled></input>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Facebook profile link*</label>
+                <input type="text" class="form-control" id="" name="" value="" disabled></input>
+            </div>
+        </div>
+    </div>
+
+    <div class="document">
+        <div class="opening">
+            <div class="icon">
+                <i class="fa-solid fa-floppy-disk"></i>
+            </div>
+        <h3>Document</h3>
+        </div>
+        <div class="file">
+            <div class="profile">
+                <p class="bold">Profile Picture</p>
+                <p>*You can upload only JPG, JPEG, PNG</p>
+                <div class="img-area">
+                    <img id="preview">
+                    <div class="icon-profile" id="iconProfile">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="cv">
+                <p class="bold">Provide Resume</p>
+                <p>*You can upload only PDF of size up to 5MB</p>
+                <p>*Or you can provide resume link</p>
+            </div>
+        </div>
+    </div>
 </body>

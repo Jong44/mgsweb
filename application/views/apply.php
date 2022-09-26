@@ -170,7 +170,7 @@
                     </div>
                     <div class="upload">
                         <div class="profile">
-                            <p class="bold">Provide Resume</p>
+                            <p class="bold">Profile Picture</p>
                             <p>*You can upload only JPG, JPEG, PNG</p>
                             <div class="img-area">
                                 <img id="preview">
