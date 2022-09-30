@@ -39,7 +39,10 @@
     </div>
 
     <div class="jadwal">
-        <?php foreach ($career as $c) :?>
+        <?php foreach ($career as $c) :
+            $date = strtotime($c['exp_date']);
+            $exp_date = date('M d, Y',$date)
+        ?>
         <div class="box1">
             <div class="row row-cols-4">
                 <div class="col-sm-3">
@@ -50,57 +53,35 @@
                     </i><i class="fa-solid fa-location-dot"></i><?= $c['country'] ?>
                 </div>
                 <div class="col-sm-3">
-                    <h5><?= $c['exp_date'] ?></h5>
+                    <h5><?= $exp_date ?></h5>
                     <p>no of vacancies</p>
                 </div>
-                <a class="btn" href="<?= base_url('user/apply')?>/<?= $c['id_job'] ?>">Apply</a>
+                <?php
+                if($this->session->userdata('id_candidates') == null){
+                    ?><a class="btn" href="<?= base_url('auth/form')?>/<?= $c['id_job'] ?>">Apply</a><?php
+                }
+                else{
+                    ?><a class="btn" href="<?= base_url('user/apply')?>/<?= $c['id_job'] ?>">Apply</a><?php
+                }?>
             </div>
         </div>
         <?php endforeach ?>
-
-        <div class="form1">
-            <div class="kotak">
-                <div class="content1">
-                    <h3>
-                        We are <div class="merah">waiting</div> for
-                    </h3>
-                    <h3><div class="merah">you to</div> join</h3>
-                    <p>
-                        We have a vision to be a provider
-                        IT Consultant services in Indonesia that
-                        focus on providing business solutions
-                        by utilizing technology.
-                    </p>
-                    <p>
-                        Be a part of us to start success in a brighter future
-                    </p>
-                    <div class="foto">
-                        <img src="assets/img/iconplus.png" alt="career">
-                        <img src="assets/img/mgs.png" alt="career">
-                    </div>
-                </div>
-                <div class="login">
-                    <form method="post">
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Email Address">
-                        </div>
-                        <div class="mb-3">
-                            <label for="password" class="form-label">Password</label>
-                            <input type="password" class="form-control" name="password" id="password" placeholder="Password">
-                        </div>
-                        <!-- <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                        </div> -->
-                        <button type="submit" class="btn btn-danger">Submit</button>
-                        <button type="submit">  Login with Google</button>
-                        
-                    </form>
-                </div>
-            </div>
-        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </div>
 </div>
+<script>
+    let register = document.querySelector('#register');
+    let form = document.querySelector('form');
+    let login = document.querySelector('.login');
+    let firstname = document.querySelector('#firstname');
+    let lastname = document.querySelector('#lastname');
+
+    register.addEventListener('click', ()=>{
+        firstname.style.display = "block";
+        lastname.style.display = "block";
+        login.style.height = "500px";
+        form.setAttribute('action','<?= base_url('proses/register') ?>');
+    })
+</script>
 
 </body>

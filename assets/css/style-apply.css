@@ -7,20 +7,19 @@ body{
 /* Judul */
 .title{
     margin-top: 7%;
+    text-align: center;
 }
 
 
 .title h1{
     font-size: 50px;
     font-weight: 700;
-    margin: 50px 80px 0 480px;
 }
 
 .title .jobtitle p{
 
     font-size: 20px;
     font-weight: 600;
-    margin: 25px 80px 0 45%;
 }
 /* ------------------------------------------------ */
 

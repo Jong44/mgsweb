@@ -16,7 +16,6 @@ class user extends CI_Controller {
 		$this->load->view('paartials/navbar');
 		$this->load->view('homepage');
 		$this->load->view('paartials/footer');
-
 	}
 	
 	public function about()
@@ -36,24 +35,40 @@ class user extends CI_Controller {
 
 	public function apply($id_job)
 	{
-		$data['career'] = $this->user_model->getIdJob($id_job);
-		$this->load->view('paartials/navbar');
-		$this->load->view('apply', $data);
-		$this->load->view('paartials/footer');
+		if($this->session->userdata('id_candidates') == null){
+			redirect('auth');
+		}
+		else{
+			$data['career'] = $this->user_model->getIdJob($id_job);
+			$this->load->view('paartials/navbar');
+			$this->load->view('apply', $data);
+			$this->load->view('paartials/footer');
+		}
+		
 	}
 
 	public function detail()
 	{
+		
 		$this->load->view('paartials/navbar');
 		$this->load->view('detail');
 		$this->load->view('paartials/footer');
 	}
 
-	public function preview()
+	public function preview($id_job)
+	{
+		$data['career'] = $this->user_model->getIdJob($id_job);
+		$data['preview'] = $this->user_model->previewCandidates();
+		$this->load->view('paartials/navbar');
+		$this->load->view('preview', $data);
+		$this->load->view('paartials/footer');
+	}
+
+	public function success()
 	{
 		
 		$this->load->view('paartials/navbar');
-		$this->load->view('preview');
+		$this->load->view('success');
 		$this->load->view('paartials/footer');
 	}
 }

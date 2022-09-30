@@ -1,0 +1,43 @@
+.content{
+    padding-top: 100px;
+    text-align: center;
+    line-height: 30px;
+    margin-bottom: 1000px;
+}
+
+
+.content a{
+    border-radius: 50px;
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    background-color: #d73a34;
+}
+
+.content a.cancel, a.cancell{
+    border-radius: 50px;
+    border: none;
+    background-color: #ffdbda;
+    padding: 17px 50px;
+    color: #d73a34;
+}
+
+a.cancell{
+    margin-right: 1005px;
+}
+
+.content img{
+    width: 20%;
+    height: 20%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.content h1{
+    font-weight: bold;
+}
+
+.content p{
+    color: #adadad;
+    margin-bottom: 30px;
+}

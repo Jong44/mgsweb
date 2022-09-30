@@ -16,10 +16,11 @@
 
 </head>
 <body>
+    <form action="<?= base_url('proses/submit')?>" method="post">
     <div class="title">
         <h1>PT. Mega Giga Solusindo</h1>
         <div class="jobtitle">
-            <p>Job Title : </p>
+            <p>Job Title : <?= $career['nama_job'] ?></p>
         </div>
     </div>
     <div class="container1">
@@ -59,33 +60,35 @@
             <div class="kiri">
                 <div class="first-name kotak">
                     <label class="form-label">First Name</label>
-                    <input type="text" id="" class="form-control" value="fefc" disabled></input>
+                    <input type="hidden" name="id_job" value="<?= $career['id_job'] ?>">
+                    <input type="text" id="" class="form-control" name="id_candidates" value="<?= $preview['id_candidates'] ?>" hidden></input>
+                    <input type="text" id="" class="form-control" name="first_name" value="<?= $preview['first_name'] ?>" readonly></input>
                 </div>
                 <div class="email-address kotak">
                     <label class="form-label">Email Address</label>
-                    <input type="text" id="" class="form-control" value="" disabled></input>
+                    <input type="text" id="" class="form-control" value="<?= $preview['email'] ?>" disabled></input>
                 </div>
                 <div class="nationality kotak">
                     <label class="form-label">Nationality</label>
-                    <input type="text" id="" class="form-control" value="" disabled></input>
+                    <input type="text" id="" class="form-control" value="<?= $preview['nationality'] ?>" disabled></input>
                 </div>
                 <div class="gender kotak">
                     <label class="form-label">Gender</label>
-                    <input type="text" id="" class="form-control" value="" disabled></input>
+                    <input type="text" id="" class="form-control" value="<?= $preview['gender'] ?>" disabled></input>
                 </div>
             </div>
             <div class="kanan">
                 <div class="last-name kotak">
                     <label class="form-label">Last Name</label>
-                    <input type="text" id="" class="form-control" value="" disabled></input>
+                    <input type="text" id="" class="form-control" name="last_name" value="<?= $preview['last_name'] ?>" readonly></input>
                 </div>
                 <div class="phone-number kotak">
                     <label class="form-label">Phone Number</label>
-                    <input type="text" id="" class="form-control" value="" disabled></input>
+                    <input type="text" id="" class="form-control" value="<?= $preview['no_hp'] ?>" disabled></input>
                 </div>
                 <div class="date-of-birth kotak">
                     <label class="form-label">Date of birth</label>
-                    <input type="text" id="" class="form-control" value="" disabled></input>
+                    <input type="text" id="" class="form-control" value="<?= $preview['tgl_lahir'] ?>" disabled></input>
                 </div>
             </div>
         </div>
@@ -101,15 +104,15 @@
         <div class="salary">
             <div class="mb-3">
                 <label class="form-label">Expected salary*</label>
-                <input type="text" class="form-control" id="inputsalary" name="expected_salary" value="" disabled></input>
+                <input type="text" class="form-control" id="inputsalary" name="expected_salary" value="<?= $preview['expected_salary'] ?>" disabled></input>
             </div>
             <div class="mb-3">
                 <label class="form-label">Linkedin profile link*</label>
-                <input type="text" class="form-control" id="" name="" value="" disabled></input>
+                <input type="text" class="form-control" id="" name="" value="<?= $preview['linked'] ?>" disabled></input>
             </div>
             <div class="mb-3">
                 <label class="form-label">Facebook profile link*</label>
-                <input type="text" class="form-control" id="" name="" value="" disabled></input>
+                <input type="text" class="form-control" id="" name="" value="<?= $preview['fb'] ?>" disabled></input>
             </div>
         </div>
     </div>
@@ -126,10 +129,8 @@
                 <p class="bold">Profile Picture</p>
                 <p>*You can upload only JPG, JPEG, PNG</p>
                 <div class="img-area">
-                    <img id="preview">
-                    <div class="icon-profile" id="iconProfile">
-                        <i class="fa-solid fa-user"></i>
-                    </div>
+                    <img src="<?= base_url('assets/img/candidates') ?>/<?= $preview['img_profil'] ?> ">
+                    
                 </div>
             </div>
             <div class="cv">
@@ -138,5 +139,11 @@
                 <p>*Or you can provide resume link</p>
             </div>
         </div>
+        <div class="btn-submit">
+            <a class="cancel">Back</a>
+            <button type="submit">Submit</button>   
+        </div>
     </div>
+    </form>
+    
 </body>

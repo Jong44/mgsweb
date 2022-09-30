@@ -57,14 +57,15 @@
         <div class="formulir">
             <form action="<?= base_url('proses/saveForm')?>" method="post" enctype="multipart/form-data">
                 <div class="kiri">
-                    <input type="hidden" name="id_job" value="<?= $career['id_job'] ?>">
+                        <input type="hidden" name="id_job" value="<?= $career['id_job'] ?>">
+                        <input type="hidden" name="id_candidates" value="<?= $this->session->userdata('id_candidates') ?>">
                         <div class="mb-3">
                             <label class="form-label">First Name</label>
-                            <input type="text" class="form-control" id="inputfirstname" name="first_name" placeholder="First name" required>
+                            <input type="text" class="form-control" id="inputfirstname" name="first_name" placeholder="First name" value="<?= $this->session->userdata('first_name') ?>" required>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Email Address</label>
-                            <input type="email" class="form-control" id="inputemail" name="email" placeholder="Email Address" required>
+                            <input type="email" class="form-control" id="inputemail" name="email" placeholder="Email Address" value="<?= $this->session->userdata('email') ?>" required>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Nationality</label>
@@ -89,7 +90,7 @@
                 <div class="kanan">
                         <div class="mb-3">
                             <label class="form-label">Last Name</label>
-                            <input type="text" class="form-control" id="inputfirstname" placeholder="Last name" name="last_name" required>
+                            <input type="text" class="form-control" id="inputfirstname" placeholder="Last name" name="last_name" value="<?= $this->session->userdata('last_name') ?>" required>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Phone Number</label>                            
@@ -219,22 +220,22 @@
             let divTag = `<div class="form-edu">
                             <div class="input-1">
                                 <label class="form-label">level of education *</label>
-                                <input type="text" class="form-control" placeholder="*No education qualification available" name="" id="inputeducational"></input>
+                                <input type="text" class="form-control" id="inputsalary" name="level" placeholder="Expected salary">
                             </div>
 
                             <div class="input-1">
                                 <label class="form-label">Exam or degree title *</label>
-                                <input type="text" class="form-control" placeholder="*No education qualification available" name="" id="inputeducational"></input>
+                                <input type="text" class="form-control" id="inputsalary" name="exam" placeholder="Expected salary">
                             </div>
 
                             <div class="input-1">
                                 <label class="form-label">Year of passing *</label>
-                                <input type="text" class="form-control" placeholder="*No education qualification available" name="" id="inputeducational"></input> 
+                                <input type="text" class="form-control" id="inputsalary" name="year" placeholder="Expected salary">
                             </div>
 
                             <div class="input-1">
                                 <label class="form-label">Institute name *</label>
-                                <input type="text" class="form-control" placeholder="*No education qualification available" name="" id="inputeducational"></input>
+                                <input type="text" class="form-control" id="inputsalary" name="institute" placeholder="Expected salary">
                             </div>
                         </div>`;
             let deleteTag = ` <span style="" id="delete"><i class="fa-solid fa-circle-xmark"></i></span> `
@@ -249,31 +250,31 @@
         btnEmploy.addEventListener("click", ()=>{
             let formtext=`<div class="input-1">
                                 <label class="form-label">Company name *</label>
-                                <input type="text" class="form-control" placeholder="*No education qualification available" name="" id="inputeducational"></input>
+                                <input type="text" class="form-control" id="inputsalary" name="company" placeholder="Expected salary">
                             </div>
 
                             <div class="input-1">
                                 <label class="form-label">Designation *</label>
-                                <input type="text" class="form-control" placeholder="*No education qualification available" name="" id="inputeducational"></input>
+                                <input type="text" class="form-control" id="inputsalary" name="designation" placeholder="Expected salary">
                             </div>
 
                             <div class="input-1">
                                 <label class="form-label">Department *</label>
-                                <input type="text" class="form-control" placeholder="*No education qualification available" name="" id="inputeducational"></input> 
+                                <input type="text" class="form-control" id="inputsalary" name="department" placeholder="Expected salary">
                             </div>
 
                             <div class="input-1">
                                 <label class="form-label">Employment periode *</label>
                                 <div class="date">
-                                    <input type="date" class="form-control" placeholder="*No education qualification available" name="" id="inputeducational"></input>
+                                <input type="date" class="form-control" id="inputsalary" name="start" placeholder="Expected salary">
                                     <p>to</p>
-                                    <input type="date" class="form-control" placeholder="*No education qualification available" name="" id="inputeducational"></input>
+                                    <input type="date" class="form-control" id="inputsalary" name="end" placeholder="Expected salary">
                                 </div>
                             </div>
 
                             <div class="respon">
                                 <label class="form-label">Responsibilities *</label>
-                                <input type="text" class="form-control" placeholder="*No education qualification available" name="" id="inputeducational"></input> 
+                                <input type="text" class="form-control" id="inputsalary" name="respon" placeholder="Expected salary">
                             </div>`;
             formEmploy.insertAdjacentHTML("afterbegin", formtext );            
 
