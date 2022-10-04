@@ -220,3 +220,7 @@ a#register:hover{
     background-color: #adadad;
     color: black;
 }
+
+.edu .opening .iconDelete i{
+    display: none;
+}

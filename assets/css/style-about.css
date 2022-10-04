@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Poppins&display=swap');
 
 body{
-    font-family: poppins;   
+    font-family: poppins; 
 }
 
 a{
@@ -175,9 +175,4 @@ a{
 .maps{
     margin-top: 10%;
     margin-left: 20%;
-}
-
-
-@media only screen and (min-width: 1200px) {
-    .example {background: pink;}
 }

@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
     <link rel="icon" href="<?= base_url('assets/img/mgs.ico') ?>">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="<?= base_url('assets/css/style-navbar.css')?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/style-about.css')?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/style-footer.css')?>">
     <script src="https://kit.fontawesome.com/860ae798ee.js" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
-
 <body>
     <div class="atas">
         <div class="logo">
@@ -53,35 +53,6 @@
         <div class="team">
             <h1>Our <div class="red">Team</div></h1>
         </div>
-        <!-- <div class="container1">
-            <div class="one">
-                <div class="icon">
-                    <i class="fa-solid fa-circle-user"></i>
-                </div>
-                <h3>Wahyu Kurniawan H.</h3>
-                <div class="prof">
-                    <p>Front-End Developer</p>
-                </div>
-            </div>
-            <div class="two">
-                <div class="icon">
-                    <i class="fa-solid fa-circle-user"></i>
-                </div>
-                <h3>Wahyu Kurniawan H.</h3>
-                <div class="prof">
-                    <p>Front-End Developer</p>
-                </div>
-            </div>
-            <div class="three">
-                <div class="icon">
-                    <i class="fa-solid fa-circle-user"></i>
-                </div>
-                <h3>Wahyu Kurniawan H.</h3>
-                <div class="prof">
-                    <p>Front-End Developer</p>
-                </div>
-            </div>
-        </div> -->
         <div class="container">
             <div class="row row-cols-auto">
                 <div class="col">
@@ -114,7 +85,7 @@
             </div>
         </div>
         <div class="container2">
-        <div class="row row-cols-auto">
+            <div class="row row-cols-auto">
                 <div class="col">
                     <div class="icon">
                         <i class="fa-solid fa-circle-user"></i>
@@ -146,6 +117,7 @@
         </div>
     </div>
     <div class="maps">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.5982363231874!2d110.37756010094503!3d-7.832275276559125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a59d5a9acd4ad%3A0x2ef32af3f0d6a09b!2sPT.%20Mega%20Giga%20Solusindo!5e0!3m2!1sid!2sid!4v1661416458637!5m2!1sid!2sid" width="80%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.5982363231874!2d110.37756010094503!3d-7.832275276559125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a59d5a9acd4ad%3A0x2ef32af3f0d6a09b!2sPT.%20Mega%20Giga%20Solusindo!5e0!3m2!1sid!2sid!4v1661416458637!5m2!1sid!2sid" width="80%" height="450" style="border:0;" allowfullscreen="true"></iframe>
     </div>
-  </body>
+</body>
+</html>

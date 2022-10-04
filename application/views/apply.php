@@ -109,12 +109,14 @@
                             <i class="fa-solid fa-graduation-cap"></i>
                         </div>
                         <h3>Educational Qualification</h3>
+                        <div class="iconDelete">
+                            <i class="fa-solid fa-circle-xmark"></i>
+                        </div>
                     </div>
                     <div class="textarea">
                         <div class="dihapus">
-                            <p>No employment record available!</p>
+                            <p>No education record available!</p>
                         </div>
-                        
                         <button type="button" class="btn btn-danger" style="border: none; border-radius: 25px; height: 50px; width: 170px; margin-top: 50px;" id="eduBtn">Add Academy</button>
                     </div>
                 </div>
@@ -133,8 +135,13 @@
                         </div>
                     </div>
                     <div class="form-employ">
-                    <p>No employment record available!</p>
-                        <button type="button" id="btnEmploy" class="btn btn-danger" style="border: none; border-radius: 25px; height: 50px; width: 170px; margin-top: 40px;">Add Company</button>
+                    <div class="textarea">
+                        <div class="dihapus">
+                            <p>No employment record available!</p>
+                        </div>
+                        
+                        <button type="button" class="btn btn-danger" style="border: none; border-radius: 25px; height: 50px; width: 170px; margin-top: 50px; margin:0px" id="btnEmploy">Add Academy</button>
+                    </div>
                     </div>
                     
                 </div>
@@ -216,6 +223,7 @@
         let textarea = document.querySelector(".textarea");
         let title = document.querySelector(".edu .opening h3")
         let text = document.querySelector(".dihapus");
+        let delete = document.querySelector(".iconDelete")
         btn.addEventListener("click", ()=>{
             let divTag = `<div class="form-edu">
                             <div class="input-1">
@@ -238,11 +246,14 @@
                                 <input type="text" class="form-control" id="inputsalary" name="institute" placeholder="Expected salary">
                             </div>
                         </div>`;
-            let deleteTag = ` <span style="" id="delete"><i class="fa-solid fa-circle-xmark"></i></span> `
             textarea.insertAdjacentHTML("afterbegin", divTag );
-            title.insertAdjacentHTML("afterend", deleteTag);
+            delete.style.display = "block"
             text.remove();
         });
+
+        delete.addEventListener("click", ()=>{
+            
+        })
 
         // employy
         let btnEmploy = document.querySelector("#btnEmploy");
